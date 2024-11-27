@@ -27,16 +27,16 @@ function calcul_prix(reservation){
 
     prix_total = reservation.nombre_enfants * prix.enfant + reservation.nombre_adolescents * prix.adolescent + reservation.nombre_adultes * prix.adulte + reservation.nombre_seniors * prix.senior;
 
-    if (nombre_personnes >= 6){
-        console.log("Prix réduit, groupe");
-        prix_total *= 0.85;
-    } else if (nombre_personnes >= 4){
-        prix_total *= 0.9;
-    } else {
-        console.log("Prix normal");
-    }
+if (nombre_personnes >= 6){
+    console.log("Prix réduit, groupe");
+    prix_total *= 0.85;
+} else if (nombre_personnes >= 4){
+    prix_total *= 0.9;
+} else {
+    console.log("Prix normal");
+}
 
-    console.log(`Le prix total est de ${prix_total}€`);
+console.log(`Le prix total est de ${prix_total}€`);
 }
 
 calcul_prix(reservation);
